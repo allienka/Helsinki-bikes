@@ -9,10 +9,10 @@ from validations import *
 validations()
 
 
-journeys1="./2021-05.csv"
-journeys2="./2021-06.csv"
-journeys3="./2021-07.csv"
-asematCSV="./asemat_avoin.csv"
+journeys1="../2021-05.csv"
+journeys2="../2021-06.csv"
+journeys3="../2021-07.csv"
+asematCSV="../asemat_avoin.csv"
 
 db_data = 'mysql+pymysql://' + 'root' + ':' + '' + '@' + 'localhost' + ':3306/' \
        + 'helsinki_bikes' + '?charset=utf8mb4'
@@ -30,37 +30,37 @@ mycursor.execute(changeName)
 mycursor.execute(createTableHslStations)
 mycursor.execute(insertIntoHslStations) 
 
-#journeyFiles=[journeys1,journeys2,journeys3]
-#for file in journeyFiles:
-journeysDF=getModifiedJourneysCSV(journeys1)
+journeyFiles=[journeys1,journeys2,journeys3]
+for file in journeyFiles:
+       journeysDF=getModifiedJourneysCSV(journeys1)
 
-result=createHslJourneys(journeysDF,mycursor,engine)
-result=mycursor.fetchall()
-mycursor.execute(addJourneysID)
-#changing datatypes 
-mycursor.execute(changeDTDeparture)
-mycursor.execute(changeDTReturn)
-mycursor.execute(changeDTDstID)
-mycursor.execute(changeDTDstName)
-mycursor.execute(changeDTRstID)
-mycursor.execute(changeDTRstName)
+       result=createHslJourneys(journeysDF,mycursor,engine)
+       result=mycursor.fetchall()
+       mycursor.execute(addJourneysID)
+       #changing datatypes 
+       mycursor.execute(changeDTDeparture)
+       mycursor.execute(changeDTReturn)
+       mycursor.execute(changeDTDstID)
+       mycursor.execute(changeDTDstName)
+       mycursor.execute(changeDTRstID)
+       mycursor.execute(changeDTRstName)
 
 
-#fill table HSL_STATIONS with potentially missing stations from journeys
-mycursor.execute(insertMissingSt)
+       #fill table HSL_STATIONS with potentially missing stations from journeys
+       mycursor.execute(insertMissingSt)
 
-#add number of journeys starting and ending at each station for this batch of data
-mycursor.execute(journeysStarted)
-mycursor.execute(journeysEnded)
+       #add number of journeys starting and ending at each station for this batch of data
+       mycursor.execute(journeysStarted)
+       mycursor.execute(journeysEnded)
 
-#add total duration of all journeys to this station and AVG
-mycursor.execute(totalStartingJourneyDist)
-mycursor.execute(totalEndingJourneyDist)
-mycursor.execute(average)
-#update timestamp of last processed data
-mycursor.execute(updateProcessedTM)
+       #add total duration of all journeys to this station and AVG
+       mycursor.execute(totalStartingJourneyDist)
+       mycursor.execute(totalEndingJourneyDist)
+       mycursor.execute(average)
+       #update timestamp of last processed data
+       mycursor.execute(updateProcessedTM)
 
-engine.dispose()
-db.commit()
+       
+       engine.dispose()
+       db.commit()
 db.close()
-
