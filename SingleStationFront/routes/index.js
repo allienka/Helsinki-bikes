@@ -74,8 +74,8 @@ router.get('/get_data', function (request, response, next) {
                         'ADDRESS':row.ADDRESS,
                         'JOURNEYS_STARTED': row.JOURNEYS_STARTED,
                         'JOURNEYS_ENDED': row.JOURNEYS_ENDED,
-                        'AVG_STARTING_JOURNEYS_DIST': row.AVG_STARTING_JOURNEYS_DIST,
-                        'AVG_ENDING_JOURNEYS_DIST': row.AVG_ENDING_JOURNEYS_DIST
+                        'AVG_STARTING_JOURNEY_DIST': row.AVG_STARTING_JOURNEY_DIST,
+                        'AVG_ENDING_JOURNEY_DIST': row.AVG_ENDING_JOURNEY_DIST
                         
                     });
                 });
