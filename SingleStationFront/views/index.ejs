@@ -14,19 +14,16 @@
 
         <title><%= title %></title>
         <style>
-            td {
-                
-                border-bottom: 1;
-            }
-            tr{
-                background-color: blanchedalmond;
-            }
-           
-            tr.shown{
-                background-color: antiquewhite;
-            }
-      
+            table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
             
+            }
+            th, td {
+            padding: 10px;
+            background-color: #E6E6FA;
+            }
+                     
         </style>
         
     </head>
@@ -64,31 +61,31 @@
 
 <script>
 function format(data) 
-    {
+{
 
-              // `data` is the data object for the row
-              return '<table cellpadding="5" cellspacing="0"'
-                  + ' style="padding-left:50px;">' +
-                  '<tr>' +
-                  '<td>STATION ADDRESS:</td>' +
-                  '<td>' + data.ADDRESS + '</td>' +
-                  '</tr>' +
-                  '<tr>' +
-                  '<td>JOURNEYS STARTED FROM HERE:</td>' +
-                  '<td>' + data.JOURNEYS_STARTED + '</td>' +
-                  '</tr>' +
-                  '<tr>' +
-                  '<td>JOURNEYS ENDED HERE:</td>' +
-                  '<td>' + data.JOURNEYS_ENDED + '</td>' +
-                  '</tr>'+
-                  '<td>AVG DISTANCE(starting):</td>' +
-                  '<td>' + data.AVG_STARTING_JOURNEYS_DIST + '</td>' +
-                  '</tr>'+
-                  '<td>AVG DISTANCE(ending):</td>' +
-                  '<td>' + data.AVG_ENDING_JOURNEYS_DIST + '</td>' +
-                  '</tr>'+
-                  '</table>';
-          }
+// `data` is the data object for the row
+return '<table cellpadding="5" cellspacing="0"'
+    + ' style="padding-left:50px;">' +
+    '<tr>' +
+    '<td><b>STATION ADDRESS: </b></td>' +
+    '<td>' + data.ADDRESS + '</td>' +
+    '</tr>' +
+    '<tr>' +
+    '<td><b>JOURNEYS STARTED HERE: </b></td>' +
+    '<td>' + data.JOURNEYS_STARTED + '</td>' +
+    '</tr>' +
+    '<tr>' +
+    '<td><b>JOURNEYS ENDED HERE: </b></td>' +
+    '<td>' + data.JOURNEYS_ENDED + '</td>' +
+    '</tr>'+
+    '<td><b>AVG DISTANCE(starting): </b></td>' +
+    '<td>' + data.AVG_STARTING_JOURNEYS_DIST + '</td>' +
+    '</tr>'+
+    '<td><b>AVG DISTANCE(ending): </b></td>' +
+    '<td>' + data.AVG_ENDING_JOURNEYS_DIST + '</td>' +
+    '</tr>'+
+    '</table>';
+}
 
 
 
