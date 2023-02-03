@@ -120,8 +120,8 @@ TABLE HSL_JOURNEYS	:
   - node_modules
   - public (includes css file)
   - routes / - users.js
-             - index.js: Connecting to the DB. Also sort, filter and search of the datatable, creating the JSON output for the frontend file (ejs)
-  - views / - error.ejs
+             - index.js: Connecting to the DB. Also sort, filter,pagination and search of the datatable, creating the JSON output for the frontend file (ejs)
+  - views / - error.ejs<br>
            - index.ejs :file to display HTML output in the browser. It includes jQuery, Boostrap 5 library link.
   - app.js
   - database.js : creating the connection to the DB
