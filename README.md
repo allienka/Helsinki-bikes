@@ -103,14 +103,33 @@ TABLE HSL_JOURNEYS	:
 # FILES DESCRIPTIONS
 
 - BACKEND:
-  - validationfunctions.py
-  - validations.py
-  - connection.py
-  - functions.py
-  - queries.py
-  - main.py
+  - validationfunctions.py : functions used for validating the CSV files before they would be inserted into the database. 
+     such as: - file exists<br>
+              - same amount of columns<br>
+              - same names of the columns<br>
+              - all datatypes are valid<br>
+               
+  - validations.py: executing the validation functions
+  - connection.py : creating the connection to the database helsinki-bikes
+  - functions.py, queries.py : functions and queries needed for modifing the csv files and inserting data to the database
+  - main.py: running the program
   
-- JOURNEYSFRONT
+- JOURNEYSFRONT 
+    (files created by the express and node js, modified for my datatable) 
+  - bin
+  - node_modules
+  - public (includes css file)
+  - routes / - users.js
+             - index.js: Connecting to the DB. Also sort, filter and search of the datatable, creating the JSON output for the frontend file (ejs)
+  - views / - error.ejs
+           - index.ejs :file to display HTML output in the browser. It includes jQuery, Boostrap 5 library link.
+  - app.js
+  - database.js : creating the connection to the DB
+  - package.json
+  - package-lock.json
+  
+           
+           
 - SINGLESTATIONFRONT
 
 
