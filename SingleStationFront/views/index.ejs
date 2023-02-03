@@ -23,6 +23,23 @@
             padding: 10px;
             background-color: #E6E6FA;
             }
+            .even {
+            background: url(https://www.datatables.net/examples/resources/details_open.png) no-repeat right;
+            cursor: pointer;
+            width: 30px;
+            transition: .5s;
+        }
+            .odd {
+            background: url(https://www.datatables.net/examples/resources/details_open.png) no-repeat right;
+            cursor: pointer;
+            width: 30px;
+            transition: .5s;
+        }
+            tr.shown td{
+            background: url(https://www.datatables.net/examples/resources/details_close.png) no-repeat right;
+            width: 30px;
+            transition: .5s;
+        }
                      
         </style>
         
@@ -39,7 +56,7 @@
                         <table id="station_data" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    
+                                   
                                     <th>STATION</th>
                                     
                                 </tr>
@@ -60,14 +77,29 @@
 </html>
 
 <script>
+function test(data) {
+  if  (data.ADDRESS==null) {
+    data.ADDRESS="not available"
+   }else if (data.JOURNEYS_STARTED==null){
+    data.JOURNEYS_STARTED="not available"
+   }else if (data.JOURNEYS_ENDED==null){
+    data.JOURNEYS_ENDED="not available"
+   }  else if (data.AVG_STARTING_JOURNEY_DIST==null){
+    data.AVG_STARTING_JOURNEY_DIST="not available"
+   }  else if (data.AVG_ENDING_JOURNEY_DIST==null){
+    data.AVG_ENDING_JOURNEY_DIST="not available"
+   }      
+}
+    
+
 function format(data) 
 {
-
+    test(data)
 // `data` is the data object for the row
 return '<table cellpadding="5" cellspacing="0"'
     + ' style="padding-left:50px;">' +
     '<tr>' +
-    '<td><b>STATION ADDRESS: </b></td>' +
+    '<td ><b>STATION ADDRESS: </b></td>' +
     '<td>' + data.ADDRESS + '</td>' +
     '</tr>' +
     '<tr>' +

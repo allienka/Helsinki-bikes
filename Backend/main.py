@@ -5,7 +5,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 from validations import *
 
-#validationg CSV files before using
+#validating CSV files before using
 validations()
 
 
@@ -29,6 +29,7 @@ mycursor.execute(changeFID)
 mycursor.execute(changeName)
 mycursor.execute(createTableHslStations)
 mycursor.execute(insertIntoHslStations) 
+print (f"{asematCSV} inserted")
 
 journeyFiles=[journeys1,journeys2,journeys3]
 for file in journeyFiles:
@@ -36,7 +37,9 @@ for file in journeyFiles:
 
        result=createHslJourneys(journeysDF,mycursor,engine)
        result=mycursor.fetchall()
+
        mycursor.execute(addJourneysID)
+
        #changing datatypes 
        mycursor.execute(changeDTDeparture)
        mycursor.execute(changeDTReturn)
@@ -49,7 +52,7 @@ for file in journeyFiles:
        #fill table HSL_STATIONS with potentially missing stations from journeys
        mycursor.execute(insertMissingSt)
 
-       #add number of journeys starting and ending at each station for this batch of data
+       #add number of journeys starting and ending at each station 
        mycursor.execute(journeysStarted)
        mycursor.execute(journeysEnded)
 
@@ -57,10 +60,11 @@ for file in journeyFiles:
        mycursor.execute(totalStartingJourneyDist)
        mycursor.execute(totalEndingJourneyDist)
        mycursor.execute(average)
+        
        #update timestamp of last processed data
        mycursor.execute(updateProcessedTM)
 
-       
+       print (f"{file} inserted")
        engine.dispose()
        db.commit()
 db.close()
