@@ -54,7 +54,7 @@ Languages and Technologies used
 
 <b>Steps to run the project on your machine</b>
 
-1. Download and install XAMPP (for example #<a here="https://www.wikihow.com/Install-XAMPP-for-Windows"></a> https://www.wikihow.com/Install-XAMPP-for-Windows)
+1. Download and install XAMPP ([here](https://www.wikihow.com/Install-XAMPP-for-Windows)
 2. Install Node and Express on your machine:
   - create a folder and open it in cmp: 
   - npm install -g express-generator (install express generator)
