@@ -94,4 +94,5 @@ JOURNEYS VIEW
 
 
 STATIONS VIEW
-![station view](https://user-images.githubusercontent.com/105230372/216556907-d5340d82-2676-452e-b4da-133a95384588.jpg)
+
+![stations view](https://user-images.githubusercontent.com/105230372/216557811-b1c604ba-05d4-47f4-821b-d6e94cc512fb.jpg)
