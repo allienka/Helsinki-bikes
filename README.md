@@ -81,7 +81,10 @@ Languages and Technologies used
 ..to do
 
 # FILES DESCRIPTIONS
-..to do
-- VALIDATIONS
+
 - BACKEND
 - FRONTEND
+
+# TO DO
+- tests
+- deployment
