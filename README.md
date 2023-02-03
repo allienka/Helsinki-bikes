@@ -37,7 +37,7 @@ you can find additional requirements or extras [here](https://github.com/solita/
 
 # PREREQUISITES
 
-- Install XAMPP web server
+- Install MySQLWorkbench or Xampp
 - Any Editor (Preferably VS Code or Sublime Text)
 - Any web browser with the latest version
 
@@ -45,7 +45,7 @@ you can find additional requirements or extras [here](https://github.com/solita/
 Languages and Technologies used
 
 - XAMPP or MySQL Workbench
-- Python
+- Python 3
 - MySQL
 - Node.js, Express
 
