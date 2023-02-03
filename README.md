@@ -54,14 +54,25 @@ Languages and Technologies used
 
 <b>Steps to run the project on your machine</b>
 
-1. Download and install XAMPP on your machine 
-2. Clone or download the repository 
-3. Extract all the files and move it to the 'htdocs' folder of your XAMPP directory. 
-4. Start Apache and Mysql in your XAMPP control panel. 
-5. Open your web browser and type 'localhost/phpmyadmin' 
-6. In phpmyadmin page, create a new database from the left panel and name it as drones 
-7. Create database 'helsinki_bikes'
-8. Open a new tab and type 'localhost/folder
+1. Download and install XAMPP
+2. Install Node and Express on your machine:
+  - create a folder and open it in cmp: 
+  - npm install -g express-generator (install express generator)
+  - npx express --view=ejs (install Node.js Express framework, with EJS template engine)
+  - npm install (install node.js dependencies)
+  - npm install mysql (install node mysql module)
+ 
+3. Clone or download the repository 
+4. Extract all the files and move them to a folder
+5. Start Apache and Mysql in your XAMPP control panel. 
+6. Open your web browser and type 'localhost/phpmyadmin' 
+7. In phpmyadmin page, create a new database from the left panel and name it as 'helsinki_bikes'
+8. Open backend files in editor and run main.py
+9. After the data are inserted to the database
+10. Open the folder JourneysFront in terminal
+11. Write 'npm run start' (it should connect to the database)
+12. Open localhost:3000 in browser , you should see the Journeys list
+13. For Stations repead the same from step 10, but with the folder SingleStationFront
 
 # DATABASE STRUCTURE
 
