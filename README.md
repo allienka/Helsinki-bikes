@@ -33,9 +33,7 @@ https://opendata.arcgis.com/datasets/726277c507ef4914b0aec3cbcfcbfafc_0.csv
 - Total number of journeys starting from the station
 - Total number of journeys ending at the station
 
-you can find additional requirements or extras:  
-
-[here](https://github.com/solita/dev-academy-2023-exercise#functional-requirements)
+you can find additional requirements or extras [here](https://github.com/solita/dev-academy-2023-exercise#functional-requirements)
 
 # PREREQUISITES
 
