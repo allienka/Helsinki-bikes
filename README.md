@@ -44,33 +44,34 @@ you can find additional requirements or extras [here](https://github.com/solita/
 
 Languages and Technologies used
 
-- XAMPP (A web server by Apache Friends)
+- XAMPP or MySQL Workbench
 - Python
 - MySQL
 - Node.js, Express
 
 
 <b>Steps to run the project on your machine</b>
-
-1. Download and install XAMPP ([instruction here](https://www.wikihow.com/Install-XAMPP-for-Windows))
-2. Install Node and Express on your machine:
+1. Download and install Python ([instructions here](https://www.geeksforgeeks.org/how-to-install-python-on-windows/))
+2. Install the libraries needed (pandas, numpy, os.path, connection,sqlalchemy) in vscode download python get-pip.py  and then pip run 'libraryname'
+3. Download and install XAMPP  or MYSQLWorkbench ([XAMPP](https://www.wikihow.com/Install-XAMPP-for-Windows) [WORKBENCH](https://www.tutorialsfield.com/how-to-install-mysql-workbench/))
+4. Install Node and Express on your machine:
   - create a folder and open it in cmp: 
   - npm install -g express-generator (install express generator)
   - npx express --view=ejs (install Node.js Express framework, with EJS template engine)
   - npm install (install node.js dependencies)
   - npm install mysql (install node mysql module)
  
-3. Clone or download the repository 
-4. Extract all the files and move them to a folder
-5. Start Apache and Mysql in your XAMPP control panel. 
-6. Open your web browser and type 'localhost/phpmyadmin' 
-7. In phpmyadmin page, create a new database from the left panel and name it as 'helsinki_bikes'
-8. Open backend files in editor and run main.py
-9. After the data are inserted to the database
-10. Open the folder JourneysFront in terminal
-11. Write 'npm run start' (it should connect to the database)
-12. Open localhost:3000 in browser , you should see the Journeys list
-13. For Stations repeat the same from step 10, but with the folder SingleStationFront
+5. Clone or download the repository 
+6. Extract all the files and move them to a folder
+7. Start Mysql in your XAMPP control panel or Workbench
+8. For Xampp open your web browser and type 'localhost/phpmyadmin' 
+9. In phpmyadmin page or Workbench, create a new database from the left panel and name it as 'helsinki_bikes'
+10. Open backend files in editor and run main.py
+11. After the data are inserted to the database
+12. Open the folder JourneysFront in terminal
+13. Write 'npm run start' (it should connect to the database)
+14. Open localhost:3000 in browser , you should see the Journeys list
+15. For Stations repeat the same from step 10, but with the folder SingleStationFront
 
 # DATABASE STRUCTURE
 
