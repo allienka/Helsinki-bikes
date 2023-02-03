@@ -114,7 +114,7 @@ TABLE HSL_JOURNEYS	:
   - functions.py, queries.py : functions and queries needed for modifing the csv files and inserting data to the database
   - main.py: running the program
   
-- JOURNEYSFRONT 
+- JOURNEYSFRONT, SINGLESTATIONFRONT
     (files created by the express and node js, modified for my datatable) 
   - bin
   - node_modules
@@ -122,7 +122,7 @@ TABLE HSL_JOURNEYS	:
   - routes / - users.js
              - index.js: Connecting to the DB. Also sort, filter,pagination and search of the datatable, creating the JSON output for the frontend file (ejs)
   - views / - error.ejs<br>
-           - index.ejs :file to display HTML output in the browser. It includes jQuery, Boostrap 5 library link.
+           - index.ejs :file to display HTML output in the browser. It includes jQuery, Boostrap 5 library link. 
   - app.js
   - database.js : creating the connection to the DB
   - package.json
@@ -130,7 +130,7 @@ TABLE HSL_JOURNEYS	:
   
            
            
-- SINGLESTATIONFRONT
+
 
 
 # TO DO
