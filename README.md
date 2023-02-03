@@ -35,7 +35,7 @@ https://opendata.arcgis.com/datasets/726277c507ef4914b0aec3cbcfcbfafc_0.csv
 
 you can find additional requirements or extras:  
 
-https://github.com/solita/dev-academy-2023-exercise#functional-requirements
+[here](https://github.com/solita/dev-academy-2023-exercise#functional-requirements)
 
 # PREREQUISITES
 
@@ -54,7 +54,7 @@ Languages and Technologies used
 
 <b>Steps to run the project on your machine</b>
 
-1. Download and install XAMPP ([here](https://www.wikihow.com/Install-XAMPP-for-Windows)
+1. Download and install XAMPP ([instruction here](https://www.wikihow.com/Install-XAMPP-for-Windows))
 2. Install Node and Express on your machine:
   - create a folder and open it in cmp: 
   - npm install -g express-generator (install express generator)
