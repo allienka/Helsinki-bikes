@@ -24,7 +24,7 @@ https://opendata.arcgis.com/datasets/726277c507ef4914b0aec3cbcfcbfafc_0.csv
 
 <b>Station list</b><br>
 
--List all the stations
+- List all the stations
 
 <b>Single station view</b><br>
 
@@ -70,40 +70,49 @@ Languages and Technologies used
 10. Open the folder JourneysFront in terminal
 11. Write 'npm run start' (it should connect to the database)
 12. Open localhost:3000 in browser , you should see the Journeys list
-13. For Stations repead the same from step 10, but with the folder SingleStationFront
+13. For Stations repeat the same from step 10, but with the folder SingleStationFront
 
 # DATABASE STRUCTURE
 
 ![helsinki_bikes_structure](https://user-images.githubusercontent.com/105230372/215819132-10c70a02-85e6-4bbd-804c-b9f2b15999c6.jpg)
 
 TABLE HSL_STATIONS:
--	STATION ID
--	STATION
--	ADDRESS
--	JOURNEYS STARTED
--	JOURNEYS ENDED
--	AVG STARTING JOURNEY DIST
--	AVG ENDING JOURNEY DIST
--	TOTAL ENDING JOURNEY DIST
--	TOTAL STARTING JOURNEY DIST
--	LAST PROCESSED TM
+-	STATION ID: stations ID  INTEGER
+-	STATION: station name  VARCHAR
+-	ADDRESS: stations address VARCHAR
+-	JOURNEYS STARTED: how many journeys started from the particular station DOUBLE(10,2)
+-	JOURNEYS ENDED: how many journeys ended at this station DOUBLE(10,2)
+-	AVG STARTING JOURNEY DIST: average amount of journeys starting from this station DOUBLE(10,2)
+-	AVG ENDING JOURNEY DIST: average amount of journeys ending from this station DOUBLE (10,2)
+-	TOTAL ENDING JOURNEY DIST: amout of all journeys starting from this station (needed for counting the avg) DOUBLE(10,2)
+-	TOTAL STARTING JOURNEY DIST: amout of all journeys ending from this station (needed for counting the avg) DOUBLE(10,2)
+-	LAST PROCESSED TM: time of the last insert TIMESTAMP
 
 TABLE HSL_JOURNEYS	:
-- DEPARTURE
-- RETURN
-- DEPARTURE STATION ID
-- DEPARTURE STATION
-- RETURN STATION ID
-- RETURN STATION
-- DISTANCE
-- DURATION
-- JOURNEYS ID
+- DEPARTURE: the time of the departure TIMESTAMP
+- RETURN: the time of retrun TIMESTAMP
+- DEPARTURE STATION ID: ID of the departure station INTEGER
+- DEPARTURE STATION: name of the departure station VARCHAR
+- RETURN STATION ID:ID of the return station INTEGER
+- RETURN STATION: name of the return station VARCHAR
+- DISTANCE: the distance of the journey in KM DOUBLE
+- DURATION: duration of the journey in minutes DOUBLE
+- JOURNEYS ID: created ID in the journeys table
 
 
 # FILES DESCRIPTIONS
 
-- BACKEND
-- FRONTEND
+- BACKEND:
+  - validationfunctions.py
+  - validations.py
+  - connection.py
+  - functions.py
+  - queries.py
+  - main.py
+  
+- JOURNEYSFRONT
+- SINGLESTATIONFRONT
+
 
 # TO DO
 - tests
