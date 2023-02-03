@@ -89,9 +89,9 @@ Languages and Technologies used
 - tests
 - deployment
 
-# JOURNEYS VIEW 
+JOURNEYS VIEW
 ![journeys view](https://user-images.githubusercontent.com/105230372/216556861-7457560e-32fe-4dd3-8d82-d2e2f027742d.jpg)
 
 
-#STATIONS VIEW
+STATIONS VIEW
 ![station view](https://user-images.githubusercontent.com/105230372/216556907-d5340d82-2676-452e-b4da-133a95384588.jpg)
