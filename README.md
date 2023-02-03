@@ -1,6 +1,6 @@
 # Helsinki-citybikes
 
-The aim of this project is to create a web application that shows the list of the journeys and stations used with Helsinki city bikes. The app uses a backend service to fetch the data. Backend can use a database, or it can be memory-based. 
+The aim of this project is to create a web application which lists all the journeys and stations by Helsinki city bikes. The app uses a backend service to fetch the data. Backend can use a database, or it can be memory-based. 
 
 # Requirements
 
