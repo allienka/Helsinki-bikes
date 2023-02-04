@@ -4,7 +4,7 @@ import pandas as pd
 def createInsertedStations(file,mycursor,engine):
     stationsDF=pd.read_csv(file)
     stationsDF.to_sql('insertedstations', engine,if_exists='replace',index=False)
-    insertedstations="SELECT * FROM insertedstations"
+    insertedstations="SELECT * FROM insertedstations WHERE FID>0"
     mycursor.execute(insertedstations)
 
 def getModifiedJourneysCSV(file,):
@@ -16,26 +16,5 @@ def getModifiedJourneysCSV(file,):
 
 def createHslJourneys(DF,mycursor,engine):
     DF.to_sql('hsl_journeys', engine,if_exists='replace',index=False)
-    journeysSql="SELECT * FROM hsl_journeys WHERE DISTANCE >0.01 AND DURATION >0.01"
+    journeysSql="SELECT * FROM hsl_journeys WHERE DISTANCE >0.01 AND DURATION >0.01  AND DEPARTURE > 'RETURN' AND DEPARTURE_STATION_ID>0 AND RETURN_STATION_ID>0;"
     mycursor.execute(journeysSql)
-
-
-"""
-def getSQLquery(tablename,columns,values):
-    sql = (f"INSERT INTO {tablename}"
-        f"({columns})" 
-        f" VALUES ({values})")
-    
-    return sql
-def getCountFromDepartureStation(db):
-    mycursor = db.cursor()
-    mycursor.execute("SELECT Departure_station_name, count(*) from hsl_journeys GROUP BY Departure_station_name")
-    records=mycursor.fetchall()
-    return records
-
-def getCountFromReturnStation(db):
-    mycursor = db.cursor()
-    mycursor.execute("SELECT Return_station_name, count(*) from hsl_journeys GROUP BY Return_station_name")
-    records=mycursor.fetchall()
-    return records
-    """

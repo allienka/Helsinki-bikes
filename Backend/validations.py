@@ -1,16 +1,9 @@
-import pandas as pd
-from csvvalidator import *
 from validationfunctions import *
 
 #files from https://github.com/solita/dev-academy-2023-exercise
 
-def validations():
-    file1="../2021-05.csv"
-    file2="../2021-06.csv"
-    file3="../2021-07.csv"
-    file4="../asemat_avoin.csv"
-
-
+def validations(file1,file2,file3,file4):
+   
 
     toReadFiles=[file1,file2,file3,file4]
     journeyFiles=[file1,file2,file3]

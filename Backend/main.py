@@ -1,18 +1,18 @@
 from functions import *
 from queries import *
-from connection import createDbc
-import pandas as pd
-from sqlalchemy import create_engine
 from validations import *
-
-#validating CSV files before using
-validations()
+from connection import createDbc
+from sqlalchemy import create_engine
 
 
 journeys1="../2021-05.csv"
 journeys2="../2021-06.csv"
 journeys3="../2021-07.csv"
 asematCSV="../asemat_avoin.csv"
+
+
+#validating CSV files before using
+validations(journeys1,journeys2,journeys3,asematCSV)
 
 db_data = 'mysql+pymysql://' + 'root' + ':' + '' + '@' + 'localhost' + ':3306/' \
        + 'helsinki_bikes' + '?charset=utf8mb4'

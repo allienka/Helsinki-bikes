@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os.path
 from csvvalidator import *
-from datetime import datetime
+#from datetime import datetime
 
 def checkFileExists(file):
     if os.path.isfile(file)==True:
