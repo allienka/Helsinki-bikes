@@ -130,13 +130,7 @@ TABLE HSL_JOURNEYS	:
   - package-lock.json
   
            
-           
-
-
-
-# TO DO
-- tests
-- deployment
+          
 
 
 
@@ -146,3 +140,8 @@ https://user-images.githubusercontent.com/105230372/216759729-a716c5ae-fb10-444b
 
 https://user-images.githubusercontent.com/105230372/216759748-1a3f730a-66bb-4dee-ba97-985d443bd0bd.mp4
 
+
+
+# TO DO
+- tests
+- deployment
