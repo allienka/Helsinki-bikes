@@ -71,7 +71,7 @@ Languages and Technologies used
 12. Open the folder JourneysFront in terminal
 13. Write 'npm run start' (it should connect to the database)
 14. Open localhost:3000 in browser , you should see the Journeys list
-15. For Stations repeat the same from step 10, but with the folder SingleStationFront
+15. For Stations repeat the same from step 11, but with the folder SingleStationFront
 
 # DATABASE STRUCTURE
 
