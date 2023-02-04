@@ -138,13 +138,11 @@ TABLE HSL_JOURNEYS	:
 - tests
 - deployment
 
-JOURNEYS
+
 
 https://user-images.githubusercontent.com/105230372/216759729-a716c5ae-fb10-444b-b86f-4f288d3da82d.mp4
 
 
-
-STATIONS
 
 https://user-images.githubusercontent.com/105230372/216759748-1a3f730a-66bb-4dee-ba97-985d443bd0bd.mp4
 
