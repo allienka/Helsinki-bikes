@@ -139,9 +139,12 @@ TABLE HSL_JOURNEYS	:
 - deployment
 
 JOURNEYS VIEW
-![journeys view](https://user-images.githubusercontent.com/105230372/216556861-7457560e-32fe-4dd3-8d82-d2e2f027742d.jpg)
+https://user-images.githubusercontent.com/105230372/216759729-a716c5ae-fb10-444b-b86f-4f288d3da82d.mp4
+
+
 
 
 STATIONS VIEW
 
-![stations view](https://user-images.githubusercontent.com/105230372/216557811-b1c604ba-05d4-47f4-821b-d6e94cc512fb.jpg)
+https://user-images.githubusercontent.com/105230372/216759748-1a3f730a-66bb-4dee-ba97-985d443bd0bd.mp4
+
