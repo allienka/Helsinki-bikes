@@ -13,6 +13,7 @@
         <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
         <title><%= title %></title>
+        <button type="button" id="myButton" onClick="$('#default').click()"style="float:left;margin-left:20px;">VALIDATE AND IMPORT</button>
     </head>
     <body>
         <div class="container">
@@ -49,6 +50,27 @@
 
 <script>
 
+$('#myButton').click(function(){
+    alert("Importing and validating data.Please wait...")
+    $.ajax({
+     type:'get',
+     url:'../import/mainjourneys.py',
+     
+     success: function(data) {
+    
+        },
+    
+     error: function(request, status, error) {
+       
+     }
+     
+  });
+  setTimeout(function(){
+   window.location.reload(1);
+}, 100000);
+});
+
+
 $(document).ready(function(){
 
 var dataTable = $('#journey_data').DataTable({
@@ -70,5 +92,4 @@ var dataTable = $('#journey_data').DataTable({
 });
 
 });
-
 </script>
