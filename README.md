@@ -60,6 +60,7 @@ Languages and Technologies used
   - npx express --view=ejs (install Node.js Express framework, with EJS template engine)
   - npm install (install node.js dependencies)
   - npm install mysql (install node mysql module)
+  - npm install python-shell
  
 5. Clone or download the repository 
 6. Extract all the files and move them to a folder
