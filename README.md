@@ -114,9 +114,9 @@ TABLE HSL_JOURNEYS	:
   - validations.py: executing the validation functions
   - connection.py : creating the connection to the database helsinki-bikes
   - functions.py, queries.py : functions and queries needed for modifing the csv files and inserting data to the database
-  - main.py: running the program
+  - mainjourneys.py, mainstations: running the program
   
-- JOURNEYSFRONT, SINGLESTATIONFRONT
+- JOURNEYS, STATIONS
     (files created by the express and node js, modified for my datatable) 
   - bin
   - node_modules
