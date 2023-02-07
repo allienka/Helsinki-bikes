@@ -1,11 +1,40 @@
 var express = require('express');
 var router = express.Router();
 var database = require('../database');
+var {PythonShell} =require('python-shell');
 
-/* GET home page. */
+var options={
+    
+    mode: 'text',
+    pythonOptions: ['-u'], 
+    scriptPath: '', 
+    
+};
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Express' });
 });
+
+const { spawn } = require('child_process')
+router.get('/', function(req, res) {
+  
+    const scriptPath = '../import/mainstations.py'
+    const process = spawn('python', [scriptPath])
+    process.stdout.on('data', (myData) => {
+        
+    })
+    process.stderr.on('data', (myErr) => {
+       
+    })
+});
+
+
+PythonShell.run('../import/mainstations.py', options, function (err, result){
+      if (err) throw err;
+      
+      console.log('Validations OK. Data inserted');
+     
+    });
+
 router.get('/get_data', function (request, response, next) {
 
     var draw = request.query.draw;
@@ -39,11 +68,7 @@ router.get('/get_data', function (request, response, next) {
    
     )
   `;
-  /*OR ADDRESS LIKE '%${search_value}%' 
-    OR JOURNEYS_STARTED LIKE '%${search_value}%' 
-    OR JOURNEYS_ENDED LIKE '%${search_value}%'
-    OR AVG_STARTING_JOURNEYS_DIST LIKE '%${search_value}%' 
-    OR AVG_STARTING_JOURNEYS_DIST LIKE '%${search_value}%'*/
+
 
     //Total number of records without filtering
 
